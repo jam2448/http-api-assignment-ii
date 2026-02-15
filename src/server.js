@@ -1,17 +1,10 @@
 const http = require('http');
 const responseHandler = require('./jsonResponses.js');
 const htmlHandler = require('./htmlResponses.js');
-const query = require('querystring');
 
 
 const port = process.env.PORT || process.env.NODE_PORT || 3000;
 
-const urlStruct = {
-    '/': htmlHandler.getIndex,
-    '/style.css': htmlHandler.getCSS,
-    '/getUsers': responseHandler.getUsers,
-    '/notReal': responseHandler.notReal,
-};
 
 const parseBody = (request, response, handler) => {
 
