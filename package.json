@@ -1,0 +1,27 @@
+{
+  "name": "http-api-assignment-ii",
+  "version": "1.0.0",
+  "description": "API assignment 2",
+  "main": "eslint.config.js",
+  "scripts": {
+    "start": "node ./src/server.js",
+    "pretest": "eslint ./src --fix",
+    "test": "echo \"Tests complete\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jam2448/http-api-assignment-ii.git"
+  },
+  "author": "Jarin Moses",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/jam2448/http-api-assignment-ii/issues"
+  },
+  "homepage": "https://github.com/jam2448/http-api-assignment-ii#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  },
+  "dependencies": {
+    "eslint": "^10.0.0"
+  }
+}
