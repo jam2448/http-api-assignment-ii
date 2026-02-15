@@ -19,7 +19,7 @@ const respondJSON = (request, response, statusCode, object) => {
 
     response.end();
 
-}
+};
 
 
 //return the list of users
@@ -87,4 +87,4 @@ module.exports = {
     getUsers,
     addUser,
     notReal,
-}
+};

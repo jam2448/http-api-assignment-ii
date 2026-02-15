@@ -21,7 +21,6 @@ const parseBody = (request, response, handler) => {
         body.push(chunk);
     });
 
-
     request.on('end', () => {
         const bodystring = Buffer.concat(body).toString();
         const type = request.headers['content-type'];
@@ -37,7 +36,6 @@ const parseBody = (request, response, handler) => {
 
         }
 
-
         handler(request, response);
     });
 };
@@ -47,8 +45,6 @@ const handlePost = (request, response, parsedURL) => {
     if (parsedURL.pathname === '/addUser') {
         parseBody(request, response, responseHandler.addUser);
     }
-
-
 };
 
 const handleGet = (request, response, parsedURL) => {
@@ -71,7 +67,6 @@ const handleGet = (request, response, parsedURL) => {
 
 };
 
-
 const onRequest = (request, response) => {
 
     const protocol = request.connection.encrypted ? 'https' : 'http';
@@ -83,7 +78,6 @@ const onRequest = (request, response) => {
     else {
         handleGet(request, response, parsedURL);
     }
-
 };
 
 http.createServer(onRequest).listen(port, () => {
